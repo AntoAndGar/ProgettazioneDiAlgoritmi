@@ -18,7 +18,7 @@ def mat(n):
                 if ( (i == 0 and j == 0) or
                      (j == 0 and x >= sol[i-1][j]) or
                      (i == 0 and x >= sol[i][j-1]) or
-                     (x >= sol[i-1][j] and x >= sol[i-1][j-1] and x >= sol[i][j-1]) ):
+                     (x >= sol[i-1][j] and x >= sol[i][j-1]) ): # and x >= sol[i-1][j-1] <--useless
                     sol[i][j] = x
                     if j < n-1:
                         es8(n,i,j+1)
